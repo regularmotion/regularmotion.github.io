@@ -363,7 +363,8 @@ sup {
   opacity: .6; }
 
 p {
-  text-align: justify; }
+  text-align: justify;
+  line-height: 1.9em; }
 
 html {
   font-size: 16px;
