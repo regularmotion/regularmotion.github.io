@@ -3,4 +3,6 @@ $(document).ready(function () {
     Theme.fancybox.register();
   }
   Theme.backToTop.register();
+
+  disqus.load();
 });

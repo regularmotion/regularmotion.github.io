@@ -634,7 +634,7 @@ h6 {
         text-align: left; }
     .post .post-content code, .post .post-content pre {
       padding: 7px;
-      font-size: 13px;
+      font-size: 14px;
       font-family: monospace;
       background: #f2f2f2; }
     .post .post-content code {
@@ -652,7 +652,7 @@ h6 {
           right: 0;
           left: 0;
           padding: 2px 7px;
-          font-size: 13px;
+          font-size: 14px;
           font-weight: bold;
           color: #999;
           background: #eaeaea;
@@ -703,7 +703,7 @@ h6 {
           margin: 0;
           padding: 30px 7px 10px; }
       .post .post-content .highlight .line {
-        height: 20px; }
+        height: 21px; }
       .post .post-content .highlight table, .post .post-content .highlight tr, .post .post-content .highlight td {
         margin: 0;
         padding: 0;
