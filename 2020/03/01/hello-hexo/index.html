@@ -43,7 +43,7 @@
 <meta property="og:description" content="Hexo는 Node.js로 개발된 블로그 프레임워크입니다.마크다운으로 작성한 포스트를 배포 할 수 있도록 되어 있습니다.(마크다운과 깃에 익숙한 분들은 쉽게 본인만의 블로그를 구축&#x2F;운용 할 수 있는 프레임워크입니다.)    Markdown Guide: https:&#x2F;&#x2F;www.markdownguide.org&#x2F;basic-syntax&#x2F; Git Tutorial: h">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-03-01T03:24:05.000Z">
-<meta property="article:modified_time" content="2020-03-01T14:49:29.313Z">
+<meta property="article:modified_time" content="2020-03-01T15:29:08.119Z">
 <meta property="article:author" content="Jangrok Lee">
 <meta property="article:tag" content="Hexo, Blog, GettingStart">
 <meta name="twitter:card" content="summary">
@@ -143,17 +143,15 @@
 <li>Markdown Guide: <a href="https://www.markdownguide.org/basic-syntax/" target="_blank" rel="noopener">https://www.markdownguide.org/basic-syntax/</a></li>
 <li>Git Tutorial: <a href="https://git-scm.com/docs/gittutorial" target="_blank" rel="noopener">https://git-scm.com/docs/gittutorial</a></li>
 </ul>
-<h3 id="1-설치-https-hexo-io-ko-docs"><a href="#1-설치-https-hexo-io-ko-docs" class="headerlink" title="1. 설치: https://hexo.io/ko/docs/"></a>1. 설치: <a href="https://hexo.io/ko/docs/" target="_blank" rel="noopener">https://hexo.io/ko/docs/</a></h3><p>v8.10 이상의 Node.js와 Git이 미리 설치되어 있는 상태에서 hexo-cli 패키지를 설치합니다.<br><code>$ npm install -g hexo-cli</code></p>
-<h3 id="2-초기화-https-hexo-io-ko-docs-setup"><a href="#2-초기화-https-hexo-io-ko-docs-setup" class="headerlink" title="2. 초기화: https://hexo.io/ko/docs/setup"></a>2. 초기화: <a href="https://hexo.io/ko/docs/setup" target="_blank" rel="noopener">https://hexo.io/ko/docs/setup</a></h3><ul>
-<li>scaffolds: Scaffold 파일이 위치하는 폴더입니다. Hexo 명령어 (e.g. <code>hexo new post {post-name})</code>로 새로운 포스트나 페이지를 생성 할 때, Scaffolds를 기준으로 새 파일을 생성합니다. </li>
+<h3 id="1-설치-https-hexo-io-ko-docs"><a href="#1-설치-https-hexo-io-ko-docs" class="headerlink" title="1. 설치 - https://hexo.io/ko/docs/"></a>1. 설치 - <a href="https://hexo.io/ko/docs/" target="_blank" rel="noopener">https://hexo.io/ko/docs/</a></h3><p>v8.10 이상의 Node.js와 Git이 미리 설치되어 있는 상태에서 hexo-cli 패키지를 설치합니다.<br><code>$ npm install -g hexo-cli</code></p>
+<h3 id="2-초기화-https-hexo-io-ko-docs-setup"><a href="#2-초기화-https-hexo-io-ko-docs-setup" class="headerlink" title="2. 초기화 - https://hexo.io/ko/docs/setup"></a>2. 초기화 - <a href="https://hexo.io/ko/docs/setup" target="_blank" rel="noopener">https://hexo.io/ko/docs/setup</a></h3><ul>
+<li>scaffolds: Scaffold 파일이 위치하는 폴더입니다. Hexo 명령어 (e.g. <code>hexo new post {post-name}</code>)로 새로운 포스트나 페이지를 생성 할 때, Scaffolds를 기준으로 새 파일을 생성합니다. </li>
 <li>source: 웹 사이트의 컨텐츠(Markdown Files)가 위치하는 폴더입니다. 렌더링 가능한 파일(e.g. Markdown, HTML 등)은 전처리 후 public 폴더로 복사됩니다.</li>
 <li>themes: 설치된 Theme가 저장되는 폴더입니다. 설치된 Theme 중 적용하려는 Theme를 _config.yml 파일에서 지정합니다.</li>
 </ul>
-<h3 id="3-설정-https-hexo-io-ko-docs-configuration"><a href="#3-설정-https-hexo-io-ko-docs-configuration" class="headerlink" title="3. 설정: https://hexo.io/ko/docs/configuration"></a>3. 설정: <a href="https://hexo.io/ko/docs/configuration" target="_blank" rel="noopener">https://hexo.io/ko/docs/configuration</a></h3><p>_config.yml 파일의 속성을 수정하여 블로그/사이트의 설정을 변경 할 수 있습니다.<br>사이트의 이름, URL, 게시글의 Permalink 형식, Theme, Deploy 속성 등을 설정 할 수 있습니다.</p>
-<h3 id="4-새-글-작성-https-hexo-io-ko-docs-writing"><a href="#4-새-글-작성-https-hexo-io-ko-docs-writing" class="headerlink" title="4. 새 글 작성: https://hexo.io/ko/docs/writing"></a>4. 새 글 작성: <a href="https://hexo.io/ko/docs/writing" target="_blank" rel="noopener">https://hexo.io/ko/docs/writing</a></h3><p><code>hexo new post {post-name}</code> 명령어를 실행하면 <code>/source/_post/{post-name}.md</code> 경로에 파일이 생성됩니다.<br>생성된 파일에 마크다운 양식으로 작성하면 됩니다. 작성된 글은 <code>$ hexo generate --deploy</code> 명령어로 배포 할 수 있습니다.<br>Post의 Front-matter는 기본적으로 title, date, tags를 포함합니다. 글에 추가하고 싶은 Tag가 있는 경우, Front-matter의 tags에 선언하면 됩니다.</p>
-<h3 id="5-테마-변경"><a href="#5-테마-변경" class="headerlink" title="5. 테마 변경:"></a>5. 테마 변경:</h3><h3 id="6-테마-수정"><a href="#6-테마-수정" class="headerlink" title="6. 테마 수정:"></a>6. 테마 수정:</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">LinkAccount</span> <span class="keyword">extends</span> <span class="title">AbsDTO</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> BaseResponse response;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">LinkAccount</span><span class="params">(<span class="keyword">int</span> httpStatus)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(httpStatus);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">LinkAccount</span><span class="params">(<span class="keyword">int</span> httpStatus, BaseResponse response)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(httpStatus, response);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">this</span>.response = response;</span><br><span class="line"></span><br><span class="line">        Log.e(<span class="string">"TAPAS"</span>, <span class="string">"[LinkAccount] link: "</span> + <span class="keyword">this</span>.response.message + <span class="string">" , "</span> + <span class="keyword">this</span>.response.code);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="7-글-목차"><a href="#7-글-목차" class="headerlink" title="7. 글 목차:"></a>7. 글 목차:</h3><h3 id="8-Disqus-연동"><a href="#8-Disqus-연동" class="headerlink" title="8. Disqus 연동"></a>8. Disqus 연동</h3>
+<h3 id="3-설정-https-hexo-io-ko-docs-configuration"><a href="#3-설정-https-hexo-io-ko-docs-configuration" class="headerlink" title="3. 설정 - https://hexo.io/ko/docs/configuration"></a>3. 설정 - <a href="https://hexo.io/ko/docs/configuration" target="_blank" rel="noopener">https://hexo.io/ko/docs/configuration</a></h3><p>_config.yml 파일의 속성을 수정하여 블로그/사이트의 설정을 변경 할 수 있습니다.<br>사이트의 이름, URL, 게시글의 Permalink 형식, Theme, Deploy 속성 등을 설정 할 수 있습니다.</p>
+<h3 id="4-새-글-작성-https-hexo-io-ko-docs-writing"><a href="#4-새-글-작성-https-hexo-io-ko-docs-writing" class="headerlink" title="4. 새 글 작성 - https://hexo.io/ko/docs/writing"></a>4. 새 글 작성 - <a href="https://hexo.io/ko/docs/writing" target="_blank" rel="noopener">https://hexo.io/ko/docs/writing</a></h3><p><code>hexo new post {post-name}</code> 명령어를 실행하면 <code>/source/_post/{post-name}.md</code> 경로에 파일이 생성됩니다.<br>생성된 파일에 마크다운 양식으로 작성하면 됩니다. 작성된 글은 <code>$ hexo generate --deploy</code> 명령어로 배포 할 수 있습니다.<br>Post의 Front-matter는 기본적으로 title, date, tags를 포함합니다. 글에 추가하고 싶은 Tag가 있는 경우, Front-matter의 tags에 선언하면 됩니다.</p>
+<h3 id="5-글-목차"><a href="#5-글-목차" class="headerlink" title="5. 글 목차:"></a>5. 글 목차:</h3><h3 id="6-Disqus-연동"><a href="#6-Disqus-연동" class="headerlink" title="6. Disqus 연동"></a>6. Disqus 연동</h3>
             </div>
           
 
@@ -176,6 +174,16 @@
 
         
   <div class="comments" id="comments">
+    
+    <div style="text-align:center;">
+        <button class="btn" id="load-disqus" onclick="disqus.load();">加载 Disqus 评论</button>
+    </div>
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a>
+        </noscript>
+      </div>
     
   </div>
 
@@ -206,6 +214,37 @@
       </div>
     </div>
     
+
+<script type="text/javascript">
+  var disqus_shortname = 'regular-motion';
+  var disqus_identifier = '2020/03/01/hello-hexo/';
+
+  var disqus_title = "Hello, Hexo";
+
+
+  var disqus = {
+    load : function disqus(){
+        if(typeof DISQUS !== 'object') {
+          (function () {
+          var s = document.createElement('script'); s.async = true;
+          s.type = 'text/javascript';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+          }());
+          $('#load-disqus').remove(); ///加载后移除按钮
+        }
+    }
+  }
+
+  
+    var disqus_config = function () {
+        this.page.url = disqus_url;
+        this.page.identifier = disqus_identifier;
+        this.page.title = disqus_title;
+    };
+  
+
+</script>
 
 
     

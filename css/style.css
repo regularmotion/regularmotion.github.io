@@ -541,7 +541,7 @@ h6 {
       right: 0;
       left: 0; }
   .post .post-time {
-    color: #aaa;
+    color: #999;
     display: block;
     font-size: 14px;
     margin-bottom: 10px; }
@@ -553,32 +553,50 @@ h6 {
       font-size: 1.3em;
       font-weight: 400;
       font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
-      margin-top: 1.2em; }
+      margin-top: 1.25em;
+      margin-block-end: .20em; }
+    .post .post-content h1 + p {
+      margin-block-start: .20em; }
     .post .post-content h2 {
       font-size: 1.3em;
       font-weight: 400;
       font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
-      margin-top: 1.2em; }
+      margin-top: 1.25em;
+      margin-block-end: .20em; }
+    .post .post-content h2 + p {
+      margin-block-start: .20em; }
     .post .post-content h3 {
       font-size: 1.3em;
       font-weight: 400;
       font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
-      margin-top: 1.2em; }
+      margin-top: 1.25em;
+      margin-block-end: .20em; }
+    .post .post-content h3 + p {
+      margin-block-start: .20em; }
     .post .post-content h4 {
       font-size: 1.3em;
       font-weight: 400;
       font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
-      margin-top: 1.2em; }
+      margin-top: 1.25em;
+      margin-block-end: .20em; }
+    .post .post-content h4 + p {
+      margin-block-start: .20em; }
     .post .post-content h5 {
       font-size: 1.3em;
       font-weight: 400;
       font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
-      margin-top: 1.2em; }
+      margin-top: 1.25em;
+      margin-block-end: .20em; }
+    .post .post-content h5 + p {
+      margin-block-start: .20em; }
     .post .post-content h6 {
       font-size: 1.3em;
       font-weight: 400;
       font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
-      margin-top: 1.2em; }
+      margin-top: 1.25em;
+      margin-block-end: .20em; }
+    .post .post-content h6 + p {
+      margin-block-start: .20em; }
     .post .post-content .headerlink:hover {
       border-bottom: 0; }
     .post .post-content .headerlink::before {
@@ -604,6 +622,8 @@ h6 {
     .post .post-content img {
       display: inline-block;
       max-width: 100%; }
+    .post .post-content li {
+      margin-bottom: .25em; }
     .post .post-content > table {
       max-width: 100%;
       margin: 10px 0;
@@ -615,8 +635,8 @@ h6 {
     .post .post-content code, .post .post-content pre {
       padding: 7px;
       font-size: 13px;
-      font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
-      background: #e8e8e8; }
+      font-family: monospace;
+      background: #f2f2f2; }
     .post .post-content code {
       padding: 3px 5px;
       color: #000; }
@@ -634,8 +654,8 @@ h6 {
           padding: 2px 7px;
           font-size: 13px;
           font-weight: bold;
-          color: #cacaca;
-          background: #f0f0f0;
+          color: #999;
+          background: #eaeaea;
           content: 'Code'; }
       .post .post-content .highlight.html > ::after {
         content: "HTML"; }
@@ -861,13 +881,13 @@ h6 {
   margin: 30px auto 0;
   padding: 20px 0;
   border-top: 1px solid #e1e1e1;
-  color: #aaa;
+  color: #999;
   font-size: 14px;
   max-width: 1000px;
   display: block;
   overflow: hidden; }
   #colophon a {
-    color: #aaa; }
+    color: #999; }
   #colophon .footer-author {
     margin: 0 4px; }
 
