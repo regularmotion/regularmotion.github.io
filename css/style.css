@@ -548,12 +548,16 @@ h6 {
   .post .post-excerpt p {
     margin: 0 0 16px; }
   .post .post-content {
-    margin-bottom: 40px; }
+    margin-bottom: 40px;
+    /** customized **/
+    /** customized **/
+    /** customized **/ }
     .post .post-content h1 {
       font-size: 1.3em;
       font-weight: 400;
       font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
-      margin-top: 1.25em;
+      /** customized **/
+      margin-top: 1.35em;
       margin-block-end: .20em; }
     .post .post-content h1 + p {
       margin-block-start: .20em; }
@@ -561,7 +565,8 @@ h6 {
       font-size: 1.3em;
       font-weight: 400;
       font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
-      margin-top: 1.25em;
+      /** customized **/
+      margin-top: 1.35em;
       margin-block-end: .20em; }
     .post .post-content h2 + p {
       margin-block-start: .20em; }
@@ -569,7 +574,8 @@ h6 {
       font-size: 1.3em;
       font-weight: 400;
       font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
-      margin-top: 1.25em;
+      /** customized **/
+      margin-top: 1.35em;
       margin-block-end: .20em; }
     .post .post-content h3 + p {
       margin-block-start: .20em; }
@@ -577,7 +583,8 @@ h6 {
       font-size: 1.3em;
       font-weight: 400;
       font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
-      margin-top: 1.25em;
+      /** customized **/
+      margin-top: 1.35em;
       margin-block-end: .20em; }
     .post .post-content h4 + p {
       margin-block-start: .20em; }
@@ -585,7 +592,8 @@ h6 {
       font-size: 1.3em;
       font-weight: 400;
       font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
-      margin-top: 1.25em;
+      /** customized **/
+      margin-top: 1.35em;
       margin-block-end: .20em; }
     .post .post-content h5 + p {
       margin-block-start: .20em; }
@@ -593,7 +601,8 @@ h6 {
       font-size: 1.3em;
       font-weight: 400;
       font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
-      margin-top: 1.25em;
+      /** customized **/
+      margin-top: 1.35em;
       margin-block-end: .20em; }
     .post .post-content h6 + p {
       margin-block-start: .20em; }
@@ -603,6 +612,10 @@ h6 {
       margin-right: 5px;
       font-size: 1.1em;
       color: #4D89FB; }
+    .post .post-content p {
+      margin-block-end: .25em; }
+    .post .post-content ul {
+      margin-block-start: .25em; }
     .post .post-content a {
       color: #4D89FB;
       word-break: break-all; }
@@ -631,6 +644,7 @@ h6 {
       .post .post-content > table th, .post .post-content > table td {
         padding: 5px 15px;
         border: 1px double #f0f0f0;
+        /** customized **/
         text-align: left; }
     .post .post-content code, .post .post-content pre {
       padding: 7px;
@@ -641,7 +655,7 @@ h6 {
       padding: 3px 5px;
       color: #000; }
     .post .post-content .highlight {
-      margin: 1em 0;
+      margin: .25em 0 1em 0;
       overflow-x: auto;
       box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.125); }
       .post .post-content .highlight table {
@@ -744,6 +758,7 @@ h6 {
         color: #dc322f; }
     .post .post-content .read-more .read-more-link {
       color: #4D89FB;
+      /** customized **/
       font-size: 1.1em;
       font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif; }
       .post .post-content .read-more .read-more-link:hover {
