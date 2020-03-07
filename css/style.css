@@ -554,7 +554,7 @@ h6 {
     /** customized **/ }
     .post .post-content h1 {
       font-size: 1.3em;
-      font-weight: 400;
+      font-weight: bold;
       font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
       /** customized **/
       margin-top: 1.35em;
@@ -563,7 +563,7 @@ h6 {
       margin-block-start: .20em; }
     .post .post-content h2 {
       font-size: 1.3em;
-      font-weight: 400;
+      font-weight: bold;
       font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
       /** customized **/
       margin-top: 1.35em;
@@ -572,7 +572,7 @@ h6 {
       margin-block-start: .20em; }
     .post .post-content h3 {
       font-size: 1.3em;
-      font-weight: 400;
+      font-weight: bold;
       font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
       /** customized **/
       margin-top: 1.35em;
@@ -581,7 +581,7 @@ h6 {
       margin-block-start: .20em; }
     .post .post-content h4 {
       font-size: 1.3em;
-      font-weight: 400;
+      font-weight: bold;
       font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
       /** customized **/
       margin-top: 1.35em;
@@ -590,7 +590,7 @@ h6 {
       margin-block-start: .20em; }
     .post .post-content h5 {
       font-size: 1.3em;
-      font-weight: 400;
+      font-weight: bold;
       font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
       /** customized **/
       margin-top: 1.35em;
@@ -599,7 +599,7 @@ h6 {
       margin-block-start: .20em; }
     .post .post-content h6 {
       font-size: 1.3em;
-      font-weight: 400;
+      font-weight: bold;
       font-family: "Open Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
       /** customized **/
       margin-top: 1.35em;
@@ -614,7 +614,7 @@ h6 {
       color: #4D89FB; }
     .post .post-content p {
       margin-block-end: .25em; }
-    .post .post-content ul {
+    .post .post-content ol, .post .post-content ul {
       margin-block-start: .25em; }
     .post .post-content a {
       color: #4D89FB;
@@ -653,7 +653,8 @@ h6 {
       background: #f2f2f2; }
     .post .post-content code {
       padding: 3px 5px;
-      color: #000; }
+      color: #000;
+      border-radius: 3px; }
     .post .post-content .highlight {
       margin: .25em 0 1em 0;
       overflow-x: auto;

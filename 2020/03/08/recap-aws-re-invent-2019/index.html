@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="Recap AWS re:Invent 2019"/>
+
+
+
+
+  <meta name="keywords" content="AWS, re:Invent, RDS, RDS Proxy, CodeGuru, Lambda, Kinesis Video Streams," />
+
+
+
+
+
+  <link rel="alternate" href="/default" title="type less, think more">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1" />
+
+
+
+<link rel="canonical" href="https://regularmotion.github.io/2020/03/08/recap-aws-re-invent-2019/"/>
+
+
+<meta name="description" content="AWS re:Invent는 매년하는 행사라는게 믿기지 않을 정도로 굵직한 신기술들이 쏟아집니다.세션들 둘러보며 관심있는 주제의 영상과 블로그를 찾아보고 맛보기 한 결과를 정리하는 글 입니다.어떤 기능들이 새로 추가됐는지 전달 할 수 있으면 좋겠습니다. Amazon CodeGuruAmazon CodeGuru는 크게 2가지를 제공합니다.  Repository와">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Recap AWS re:Invent 2019">
+<meta property="og:url" content="https://regularmotion.github.io/2020/03/08/recap-aws-re-invent-2019/">
+<meta property="og:site_name" content="type less, think more">
+<meta property="og:description" content="AWS re:Invent는 매년하는 행사라는게 믿기지 않을 정도로 굵직한 신기술들이 쏟아집니다.세션들 둘러보며 관심있는 주제의 영상과 블로그를 찾아보고 맛보기 한 결과를 정리하는 글 입니다.어떤 기능들이 새로 추가됐는지 전달 할 수 있으면 좋겠습니다. Amazon CodeGuruAmazon CodeGuru는 크게 2가지를 제공합니다.  Repository와">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://regularmotion.github.io/2020/03/08/recap-aws-re-invent-2019/codeguru.png">
+<meta property="og:image" content="https://regularmotion.github.io/2020/03/08/recap-aws-re-invent-2019/rds-proxy.png">
+<meta property="article:published_time" content="2020-03-07T15:50:50.000Z">
+<meta property="article:modified_time" content="2020-03-07T15:50:50.487Z">
+<meta property="article:author" content="Jangrok Lee">
+<meta property="article:tag" content="AWS, re:Invent, RDS, RDS Proxy, CodeGuru, Lambda, Kinesis Video Streams">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://regularmotion.github.io/2020/03/08/recap-aws-re-invent-2019/codeguru.png">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-53731871-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-53731871-4');
+</script>
+
+
+    <title> Recap AWS re:Invent 2019 - type less, think more </title>
+  <meta name="generator" content="Hexo 4.2.0"></head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo">type less, think more</a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/archives">
+                            
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/about">
+                            
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          Recap AWS re:Invent 2019
+        
+      </h1>
+
+      <time class="post-time">
+          Mar 08 2020
+      </time>
+    </header>
+
+
+
+    
+            <div class="post-content">
+            <p>AWS re:Invent는 매년하는 행사라는게 믿기지 않을 정도로 굵직한 신기술들이 쏟아집니다.<br><a href="(https://aws.amazon.com/ko/new/reinvent/)">세션</a>들 둘러보며 관심있는 주제의 영상과 블로그를 찾아보고 맛보기 한 결과를 정리하는 글 입니다.<br>어떤 기능들이 새로 추가됐는지 전달 할 수 있으면 좋겠습니다.</p>
+<h3 id="Amazon-CodeGuru"><a href="#Amazon-CodeGuru" class="headerlink" title="Amazon CodeGuru"></a>Amazon CodeGuru</h3><p>Amazon CodeGuru는 크게 2가지를 제공합니다.</p>
+<ol>
+<li>Repository와 연동하여 Pull Request의 수정사항을 검토 후 피드백을 제공하는 <strong>Reviewer</strong></li>
+<li>SDK와 Snippet을 코드에 추가하면 어플리케이션의 성능을 분석해주는 <strong>Profiler</strong></li>
+</ol>
+<p>AI의 가르침에 목말랐던 저는 이 중 <strong>Reviewer</strong>에 관심이 갔습니다.<br><a href="https://aws.amazon.com/codeguru/" target="_blank" rel="noopener">공식 문서</a>를 읽어보면 CodeGuru는 Open Source 프로젝트와 Amazon 프로젝트의 코드를 통해 학습시켰다고 합니다. 학습의 결과로 아래와 같은 결함을 찾고 피드백을 제공 할 수 있다고 합니다.</p>
+<ol>
+<li>Resource Leak을 찾을 수 있다.</li>
+<li>Race condition이 발생 할 수 있는 상황을 찾을 수 있다.</li>
+<li>비효율적으로 작성된 코드를 찾아 낼 수 있다.</li>
+<li>AWS SDK / API를 사용하는 코드에 대해 Best Practice를 따르는지 확인 할 수 있다.</li>
+</ol>
+<p>인간의 리뷰가 네이밍, 비즈니스 로직과 요구사항의 일치 여부 그리고 중복된 코드 등에 초점이 맞춰지는 것과 대비되는 부분입니다.<br>선행 학습은 여기까지 하고, 실제로 AI의 가르침을 받아봅시다.<br>AI의 가르침을 받기 위해서는 CodeGuru Console에서 저장소(Repository)를 연동 후 연동된 저장소에서 Pull Request를 생성하면 자동으로 CodeGuru의 Comments가 추가됩니다. (실제로 상당히 간단합니다)<br>Pull Request 생성 후 Comments가 추가되기 까지 5~10분 정도 소요됩니다. 국가번호까지 82를 쓰는 나라에서 결코 짧은 대기 시간이라고 생각되지는 않습니다.<br>아래 이미지가 CodeGuru 연동부터 피드백을 받기까지의 과정을 잘 설명해줍니다.<br><img src="codeguru.png" alt="codeguru"></p>
+<p>실제로 어떤 피드백을 제공하는지 궁금해서 Pull Request를 10개 정도 생성해봤는데, 그닥 의미있는 피드백을 제공 받지는 못했습니다. 아래 2개가 그나마 유익한 피드백이었습니다.</p>
+<ul>
+<li>FileStream을 명시적으로 Close하지 않음</li>
+<li>인자로 전달되는 문자열이 특정 Character를 포함하지 않으면 IndexOutofBoundsException 발생 가능</li>
+</ul>
+<p>아직은 좀 미흡하다는 생각이 많이 들었습니다. 지원하는 언어도 늘고 서울 리전도 지원하는 봄날에 써보는 것을 추천합니다.<br>현시점(2020/02)에 사용했을 때 느낀 유일한 장점은 ‘설정이 쉬움’이었습니다.</p>
+<p><strong>&lt;장점&gt;</strong></p>
+<ul>
+<li>설정이 쉬움</li>
+</ul>
+<p><strong>&lt;단점&gt;</strong></p>
+<ul>
+<li>언어와 지역의 제한이 심함. 언어는 Java만 지원하고, Region은 4곳만 지원한다.</li>
+<li>$0.75/100 lines의 가격에 합당한 피드백을 제공하지 않음  </li>
+</ul>
+<p><strong>&lt;References&gt;</strong></p>
+<ul>
+<li>Session: <a href="https://www.youtube.com/watch?v=WYuo0bIZre0&t=2943s" target="_blank" rel="noopener">https://www.youtube.com/watch?v=WYuo0bIZre0&amp;t=2943s</a></li>
+<li>Service Page: <a href="https://aws.amazon.com/codeguru/" target="_blank" rel="noopener">https://aws.amazon.com/codeguru/</a></li>
+<li>Blog: <a href="https://aws.amazon.com/about-aws/whats-new/2019/12/aws-announces-amazon-codeguru-for-automated-code-reviews-and-application-performance-recommendations/?nc1=h_ls" target="_blank" rel="noopener">https://aws.amazon.com/about-aws/whats-new/2019/12/aws-announces-amazon-codeguru-for-automated-code-reviews-and-application-performance-recommendations/</a></li>
+</ul>
+<br>
+
+
+<h3 id="RDS-Data-API-for-Aurora-Serverless"><a href="#RDS-Data-API-for-Aurora-Serverless" class="headerlink" title="RDS Data API for Aurora Serverless"></a>RDS Data API for Aurora Serverless</h3><p>RDS Data API는 클라이언트 어플리케이션에서 Aurora Serverless Cluster에 Persistent한 연결을 유지하는 대신, HTTPS Endpoint로 SQL Statements 처리를 요청하고 처리 결과를 JSON 형태로 수신 할 수 있는 기능을 제공합니다.<br>또한 DB ID / Password 대신, AWS Secret Manager에 저장된 Credentials로 인증 할 수 있는 기능을 제공합니다.<br>RDS Data API를 이용하기 위해서는 필요한 설정이 있습니다. <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html#data-api.access" target="_blank" rel="noopener">IAM 권한 추가</a>, <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html#data-api.secrets" target="_blank" rel="noopener">AWS Secret Manager Credential 생성</a>, <a href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/data-api.html#data-api.vpc-endpoint" target="_blank" rel="noopener">Data API를 위한 VPC Endpoint 생성</a><br>필요한 설정이 끝났으면, Data API로 Aurora Serverless Cluster에 SQL Statements 처리를 요청 할 수 있습니다. 아래는 요청에 사용되는 CLI와 Python Snippet 입니다.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">aws rds-data execute-statement --secret-arn &quot;&#123;secrets-arn&#125;&quot; </span><br><span class="line">                               --resource-arn &quot;&#123;cluster-arn&#125;&quot;</span><br><span class="line">                               --database &#123;database-name&#125;</span><br><span class="line">                               --sql &quot;select * from &#123;table&#125;&quot;</span><br><span class="line">                               --output json</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> boto3 </span><br><span class="line"></span><br><span class="line">rdsData = boto3.client(<span class="string">'rds-data'</span>)</span><br><span class="line"></span><br><span class="line">cluster_arn = <span class="string">'arn:aws:rds:us-east-1:123456789012:cluster:mydbcluster'</span> </span><br><span class="line">secret_arn = <span class="string">'arn:aws:secretsmanager:us-east-1:123456789012:secret:mysecret'</span> </span><br><span class="line"> </span><br><span class="line">response1 = rdsData.execute_statement(</span><br><span class="line">            resourceArn = cluster_arn, </span><br><span class="line">            secretArn = secret_arn, </span><br><span class="line">            database = <span class="string">'database-name'</span>, </span><br><span class="line">            sql = <span class="string">'select * from employees limit 3'</span>)</span><br></pre></td></tr></table></figure>
+<p><strong>&lt;장점&gt;</strong></p>
+<ul>
+<li>HTTPS Endpoint(코드상으로는 Cluster의 arn)로 SQL Statement 처리를 요청 할 수 있어서 VPC 구성에서 자유롭다.</li>
+<li>RDS Data API에서 Connection을 관리하기 때문에, 클라이언트 어플리케이션에서 Persistent한 연결을 관리 할 필요가 없다.</li>
+<li>AWS Secret Manager를 통해 인증 할 수 있다.</li>
+</ul>
+<br>
+
+
+<h3 id="RDS-Proxy"><a href="#RDS-Proxy" class="headerlink" title="RDS Proxy"></a>RDS Proxy</h3><p>RDS Proxy라는 이름이 암시하듯, 클라이언트 어플리케이션과 RDS 사이에서 RDS로의 요청을 대신 처리하는 이 서비스는 Database Connection의 효과적 관리를 주 목적으로 합니다. 클라이언트 어플리케이션에서 Connection Pool이라고 부르는 기능을 대신 수행하고, 이를 공유 가능한 형태로 제공합니다.<br><img src="rds-proxy.png" alt="rds-proxy"></p>
+<p>대부분의 어플리케이션에서 Connection Pool을 구현하여 Connection을 재활용한 이유는 Connection을 생성하는 작업이 데이터베이스의 CPU와 메모리를 소모하는 작업이기 때문입니다. 그런데 최근 Lambda로 대표되는 Serverless 구성은 Connection Pool을 효과적으로 구현하기 어려워 Connection의 생성과 파기 빈도가 높습니다. 그리고 Connection의 잦은 생성과 파기는 데이터베이스의 메모리와 CPU를 갉아 먹었습니다. 이러한 배경에서 RDS Proxy가 나왔고, 구체적인 장점은 아래와 같습니다.</p>
+<p><strong>&lt;장점&gt;</strong></p>
+<ul>
+<li>Lambda와 같은 리소스에서도 Connection 재활용이 쉬워졌다. 또한 어플리케이션간 Connection 공유가 가능하여 최소한의 Connection으로 복수의 어플리케이션의 요청을 처리 할 수 있다. </li>
+<li>RDS Failover가 발생시, RDS Proxy가 새로운 RDS Instance로 요청을 보내기 때문에 Failover time이 줄어들고 별도의 DNS 변경이 필요하지 않다.</li>
+</ul>
+<p><strong>&lt;단점&gt;</strong></p>
+<ul>
+<li>이미 RDS는 가장 비싼 Resource 중 하난데, RDS Proxy를 사용하기 위해서는 $0.015/vCPU-hour(월에 약 $10) 비용을 추가로 지불해야 합니다.</li>
+</ul>
+<br>
+
+
+<h3 id="Lambda-Provisioned-Concurrency"><a href="#Lambda-Provisioned-Concurrency" class="headerlink" title="Lambda Provisioned Concurrency"></a>Lambda Provisioned Concurrency</h3><p>Lambda Cold Start로 인해 안정적인 Latency를 보장하기 어려웠던 분들의 고민을 한번에 해결 할 수 있는 기능이 추가됐습니다.<br>물론 고민 해결에는 비용($$$)이 발생하고 비용은 또 그 나름의 고민이 될 수 있으니 신중한 판단을 요하는 바입니다.<br>Lambda Provisioned Concurrency는 Lambda 함수가 수십ms 이내에 실행되는 것을 보장한다. (아름다운 속도입니다)<br>민감한 부분이니 공식 문서의 표현으로 대신합니다.</p>
+<blockquote>
+<p>Provisioned Concurrency, a feature that keeps functions initialized and hyper-ready to respond in double-digit milliseconds.</p>
+</blockquote>
+<p>다시 읽어도 hyper-ready라는 표현은 인상적입니다. hyper-ready라는 표현의 함의는 Lambda 함수에 설정된 Provisioned Concurrency 만큼 실행 환경(Execution environment)를 미리 생성해서 요청을 바로 처리 할 수 있다는 의미입니다.<br>여기까지 읽고나면, <strong>좋은데?</strong> 라는 순진한 생각과 <strong>그래서 얼만데?</strong> 라는 자본주의적인 질문이 동시에 나옵니다. AWS는 <a href="https://aws.amazon.com/lambda/pricing/" target="_blank" rel="noopener">Lambda 소개서</a>에 예시와 함께 예상 비용을 안내하고 있습니다.<br>일반 Lambda 함수의 비용이 Compute Charge와 Request Charge로 구성됐다면, Provisioned Concurrency는 여기에 Provisioned Concurrency 비용이 추가됩니다. 대신 Compute charge 비용이 내려갑니다. </p>
+<ul>
+<li>Lambda Price: Compute Charge($0.0000166667/GB-s) + Request Charge($0.20/1M)</li>
+<li>Provisioned Concurrency Lambda Price: Provisioned Concurrency($0.0000041667/GB-s) + Compute Charge($0.0000097222/GB-s) + Request Charge($0.20/1M)</li>
+</ul>
+<p>256MB의 메모리가 설정된 람다 함수에 Provisioned Concurrency를 20을 설정하고 한달을 운영했다고 가정하면,</p>
+<ul>
+<li>Total period time = 2,678,400 seconds = 31 * 24 * 3600 seconds</li>
+<li>Total memory amount = 5GB = 20 * 256MB/1024MB</li>
+<li>Total Provisioned Concurrency = 5 GB * 2,678,400 seconds = 13,392,000 GB-s</li>
+<li><strong>Monthly Provisioned Concurrency charges = $55 = 13,392,000 GB-s * $0.000004167</strong></li>
+</ul>
+<p>Compute Charge와 Request Charge를 제외한 비용이 약 $55 정도 소요됩니다.<br>REST API를 Lambda로 구성 할 때 API 별로 함수 하나가 대응하는 경우가 일반적인데, 그런 상황을 감안하면 Mission Critical 한 상황에서나 고려해볼 만한 가격입니다. (비싸다는 소리입니다)<br>우선, Serverless 환경에서 $$$로 Latency를 살 수 있다. 알고는 있자. 쓸 날이 온다.</p>
+<p><strong>&lt;References&gt;</strong></p>
+<ul>
+<li>Session: <a href="https://www.youtube.com/watch?v=EML6FKBdsNU" target="_blank" rel="noopener">https://www.youtube.com/watch?v=EML6FKBdsNU</a></li>
+<li>Pricing: <a href="https://aws.amazon.com/lambda/pricing/" target="_blank" rel="noopener">https://aws.amazon.com/lambda/pricing/</a></li>
+<li>Blog: <a href="https://aws.amazon.com/blogs/aws/new-provisioned-concurrency-for-lambda-functions/" target="_blank" rel="noopener">https://aws.amazon.com/blogs/aws/new-provisioned-concurrency-for-lambda-functions/</a></li>
+</ul>
+<br>
+
+
+<h3 id="AWS-Compute-Optimizer"><a href="#AWS-Compute-Optimizer" class="headerlink" title="AWS Compute Optimizer"></a>AWS Compute Optimizer</h3><p>기존의 AWS Cost Explorer의 Recommendations은 CPU Utilization을 참고하여 동일 Instance Family 내에서의 추천으로 제한됐습니다. 새로 추가된 AWS Compute Optimizer는 CPU Utilization과 Memory Usage, Network &amp; Disk I/O 등을 종합적으로 고려하여 Instance Type을 추천해줍니다.<br>CloudWatch 모니터링 로그를 참고하여 Instance type을 추천하기 때문에, CloudWatch 모니터링 비용이 별도로 추가되고 필요한 로그가 활성화되어 있어야 합니다.<br>또한 특정 시간대나 요일에 트래픽이 몰리는 서비스가 많기 때문에 Compute Optimizer 활성화 후 일주일 후에 추천 받을 것을 권장합니다.<br>Compute Optimizer의 가장 큰 장점은 무료라는 점입니다. 추가되는 비용은 CloudWatch 모니터링 비용 정도입니다.</p>
+<blockquote>
+<p>AWS Compute Optimizer is now available at sixteen AWS regions at no additional charge. You only pay for the CloudWatch monitoring fees.</p>
+</blockquote>
+<p><strong>&lt;References&gt;</strong></p>
+<ul>
+<li>Webinar: <a href="https://www.youtube.com/watch?v=b5Ojn2BLRA4" target="_blank" rel="noopener">https://www.youtube.com/watch?v=b5Ojn2BLRA4</a></li>
+</ul>
+<br>
+
+
+<h3 id="Kinesis-Video-Stream-support-WebRTC"><a href="#Kinesis-Video-Stream-support-WebRTC" class="headerlink" title="Kinesis Video Stream support WebRTC"></a>Kinesis Video Stream support WebRTC</h3><p>Live Media Stream 또는 기기간 영상/음성 교환 기능을 쉽게 구축 할 수 있도록 도와 줍니다. Kinesis Video Streams은 WebRTC와 관련된 기능을 온전히 제공하기 때문에 Signaling, Relay server 등을 구축/운용 할 필요가 없습니다.<br>Kinesis Video Streams의 <a href="https://github.com/awslabs/amazon-kinesis-video-streams-webrtc-sdk-android" target="_blank" rel="noopener">Codelab</a>은 README만 따라하면 30분 내로 기기간 영상 통화 기능을 실행 해볼 수 있도록 잘 작성되어있습니다. (설명을 따라 하는 것 만으로 뭔가가 제대로 완성되는 경험은 레고 이후 오랜만입니다.)<br>Codelab을 따라 하고나면 WebRTC와 관련된 기능을 <strong>온전히</strong> 제공한다는 의미가 체감이 됩니다. Kinesis Video Streams은 Peer-to-peer Media Streaming 기능을 기획하고 있다면 확실히 좋은 선택지다.</p>
+<p><strong>&lt;References&gt;</strong></p>
+<ul>
+<li>Document: <a href="https://docs.aws.amazon.com/kinesisvideostreams-webrtc-dg/latest/devguide" target="_blank" rel="noopener">https://docs.aws.amazon.com/kinesisvideostreams-webrtc-dg/latest/devguide</a></li>
+<li>Android Codelab: <a href="https://github.com/awslabs/amazon-kinesis-video-streams-webrtc-sdk-android" target="_blank" rel="noopener">https://github.com/awslabs/amazon-kinesis-video-streams-webrtc-sdk-android</a></li>
+</ul>
+
+            </div>
+          
+
+    
+      <footer class="post-footer">
+		
+		<div class="post-tags">
+		  
+			<a href="/tags/AWS-re-Invent-RDS-RDS-Proxy-CodeGuru-Lambda-Kinesis-Video-Streams/">AWS, re:Invent, RDS, RDS Proxy, CodeGuru, Lambda, Kinesis Video Streams</a>
+		  
+		</div>
+		
+
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2020/03/01/hello-hexo/">
+        <span class="next-text nav-default">Hello, Hexo</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+    <div style="text-align:center;">
+        <button class="btn" id="load-disqus" onclick="disqus.load();">加载 Disqus 评论</button>
+    </div>
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+    2020
+    <span class="footer-author">Jangrok Lee.</span>
+    <span class="power-by">
+        Powered by <a class="hexo-link" href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> and <a class="theme-link" href="https://github.com/frostfan/hexo-theme-polarbear" target="_blank" rel="noopener">Polar Bear</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+
+<script type="text/javascript">
+  var disqus_shortname = 'regular-motion';
+  var disqus_identifier = '2020/03/08/recap-aws-re-invent-2019/';
+
+  var disqus_title = "Recap AWS re:Invent 2019";
+
+
+  var disqus = {
+    load : function disqus(){
+        if(typeof DISQUS !== 'object') {
+          (function () {
+          var s = document.createElement('script'); s.async = true;
+          s.type = 'text/javascript';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+          }());
+          $('#load-disqus').remove(); ///加载后移除按钮
+        }
+    }
+  }
+
+  
+    var disqus_config = function () {
+        this.page.url = disqus_url;
+        this.page.identifier = disqus_identifier;
+        this.page.title = disqus_title;
+    };
+  
+
+</script>
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+  </body>
+</html>
