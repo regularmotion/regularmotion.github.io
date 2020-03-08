@@ -7,19 +7,15 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>About - type less, think more</title>
+<title>Tag: RDS - type less, think more</title>
 
 
-    <meta name="description" content="호기심과 유머를 견지하고,풍류를 누리는 삶을 소망합니다.막걸리와 책과 영화 그리고 스쿼트를 좋아합니다.라면은 조리법대로 끓여먹는걸 좋아합니다.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="About">
-<meta property="og:url" content="https://regularmotion.github.io/about/">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="type less, think more">
+<meta property="og:url" content="https://regularmotion.github.io/tags/RDS/">
 <meta property="og:site_name" content="type less, think more">
-<meta property="og:description" content="호기심과 유머를 견지하고,풍류를 누리는 삶을 소망합니다.막걸리와 책과 영화 그리고 스쿼트를 좋아합니다.라면은 조리법대로 끓여먹는걸 좋아합니다.">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://regularmotion.github.io/images/og_image.png">
-<meta property="article:published_time" content="2020-03-01T03:18:36.000Z">
-<meta property="article:modified_time" content="2020-03-01T03:20:58.481Z">
 <meta property="article:author" content="Jangrok Lee">
 <meta property="article:tag" content="Dev">
 <meta property="article:tag" content="Android">
@@ -86,7 +82,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="About" height="28">
+                <img src="/images/logo.svg" alt="type less, think more" height="28">
             
             </a>
         </div>
@@ -100,7 +96,7 @@
                 <a class="navbar-item"
                 href="/archives">Archives</a>
                 
-                <a class="navbar-item is-active"
+                <a class="navbar-item"
                 href="/about">About</a>
                 
             </div>
@@ -116,10 +112,6 @@
                     
                 
                 
-                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;">
-                    <i class="fas fa-list-ul"></i>
-                </a>
-                
                 
                 <a class="navbar-item search" title="Search" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -133,22 +125,83 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main">
+                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main"><div class="card">
+    <div class="card-content">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/tags">Tags</a></li>
+            <li class="is-active"><a href="#" aria-current="page">RDS</a></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+
+    
 <div class="card">
     
     <div class="card-content article ">
         
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <!-- remove time and word-count from article start -->
+            </div>
+        </div>
+        
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                About
+                <a class="has-link-black-ter" href="/2020/03/08/recap-aws-re-invent-2019/">Recap AWS re:Invent 2019</a>
             
         </h1>
         <div class="content">
-            <p>호기심과 유머를 견지하고,<br>풍류를 누리는 삶을 소망합니다.<br>막걸리와 책과 영화 그리고 스쿼트를 좋아합니다.<br>라면은 조리법대로 끓여먹는걸 좋아합니다.</p>
+            <p>AWS re:Invent는 매년하는 행사라는게 믿기지 않을 정도로 굵직한 신기술들이 쏟아집니다.<br><a href="(https://aws.amazon.com/ko/new/reinvent/)">세션</a>들 둘러보며 관심있는 주제의 영상과 블로그를 찾아보고 맛보기 한 결과를 정리하는 글 입니다.</p>
+<h2 id="Amazon-CodeGuru"><a href="#Amazon-CodeGuru" class="headerlink" title="Amazon CodeGuru"></a>Amazon CodeGuru</h2><p>Amazon CodeGuru는 크게 2가지를 제공합니다.</p>
+<ol>
+<li>Repository와 연동하여 Pull Request의 수정사항을 검토 후 피드백을 제공하는 <strong>Reviewer</strong></li>
+<li>SDK와 Snippet을 코드에 추가하면 어플리케이션의 성능을 분석해주는 <strong>Profiler</strong></li>
+</ol>
+<p>AI의 가르침에 목말랐던 저는 이 중 <strong>Reviewer</strong>에 관심이 갔습니다.<br><a href="https://aws.amazon.com/codeguru/">공식 문서</a>를 읽어보면 CodeGuru는 Open Source 프로젝트와 Amazon 프로젝트의 코드를 통해 학습시켰다고 합니다. 학습의 결과로 아래와 같은 결함을 찾고 피드백을 제공 할 수 있다고 합니다.</p>
+<ol>
+<li>Resource Leak을 찾을 수 있다.</li>
+<li>Race condition이 발생 할 수 있는 상황을 찾을 수 있다.</li>
+<li>비효율적으로 작성된 코드를 찾아 낼 수 있다.</li>
+<li>AWS SDK / API를 사용하는 코드에 대해 Best Practice를 따르는지 확인 할 수 있다.</li>
+</ol>
+<p>인간의 리뷰가 네이밍, 비즈니스 로직과 요구사항의 일치 여부 그리고 중복된 코드 등에 초점이 맞춰지는 것과 대비되는 부분입니다.<br>선행 학습은 여기까지 하고, 실제로 AI의 가르침을 받아봅시다.<br>AI의 가르침을 받기 위해서는 CodeGuru Console에서 저장소(Repository)를 연동 후 연동된 저장소에서 Pull Request를 생성하면 자동으로 CodeGuru의 Comments가 추가됩니다. (실제로 상당히 간단합니다)<br>Pull Request 생성 후 Comments가 추가되기 까지 5~10분 정도 소요됩니다. 국가번호까지 82를 쓰는 나라에서 결코 짧은 대기 시간이라고 생각되지는 않습니다.<br>아래 이미지가 CodeGuru 연동부터 피드백을 받기까지의 과정을 잘 설명해줍니다.</p>
+<img src="/2020/03/08/recap-aws-re-invent-2019/codeguru.png" class="" title="codeguru">
 
+<p>실제로 어떤 피드백을 제공하는지 궁금해서 Pull Request를 10개 정도 생성해봤는데, 그닥 의미있는 피드백을 제공 받지는 못했습니다. 아래 2개가 그나마 유익한 피드백이었습니다.</p>
+<ul>
+<li>FileStream을 명시적으로 Close하지 않음</li>
+<li>인자로 전달되는 문자열이 특정 Character를 포함하지 않으면 IndexOutofBoundsException 발생 가능</li>
+</ul>
+<p>아직은 좀 미흡하다는 생각이 많이 들었습니다. 지원하는 언어도 늘고 서울 리전도 지원하는 봄날에 써보는 것을 추천합니다.<br>현시점(2020/02)에 사용했을 때 느낀 유일한 장점은 ‘설정이 쉬움’이었습니다.</p>
+<p><strong>&lt;장점&gt;</strong></p>
+<ul>
+<li>설정이 쉬움</li>
+</ul>
+<p><strong>&lt;단점&gt;</strong></p>
+<ul>
+<li>언어와 지역의 제한이 심함. 언어는 Java만 지원하고, Region은 4곳만 지원한다.</li>
+<li>$0.75/100 lines의 가격에 합당한 피드백을 제공하지 않음  </li>
+</ul>
+<p><strong>&lt;References&gt;</strong></p>
+<ul>
+<li>Session: <a href="https://www.youtube.com/watch?v=WYuo0bIZre0&t=2943s">https://www.youtube.com/watch?v=WYuo0bIZre0&amp;t=2943s</a></li>
+<li>Service Page: <a href="https://aws.amazon.com/codeguru/">https://aws.amazon.com/codeguru/</a></li>
+<li>Blog: <a href="https://aws.amazon.com/about-aws/whats-new/2019/12/aws-announces-amazon-codeguru-for-automated-code-reviews-and-application-performance-recommendations/?nc1=h_ls">https://aws.amazon.com/about-aws/whats-new/2019/12/aws-announces-amazon-codeguru-for-automated-code-reviews-and-application-performance-recommendations/</a></li>
+</ul>
+<br>
         </div>
         
         
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2020/03/08/recap-aws-re-invent-2019/#more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
         
     </div>
 </div>
@@ -159,29 +212,7 @@
 
 
 
-<div class="card">
-    <div class="card-content">
-        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
-        
-<script>
-    var disqus_config = function () {
-        this.page.url = 'https://regularmotion.github.io/about/';
-        this.page.identifier = 'about/index.html';
-    };
-    (function() {
-        var d = document, s = d.createElement('script');  
-        s.src = '//' + 'regular-motion' + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
 
-<div id="disqus_thread">
-    
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
-    </div>
-</div>
 </div>
                 
                 
@@ -192,7 +223,6 @@
 <div class="column is-4-tablet is-4-desktop is-4-widescreen  has-order-3 column-right is-sticky">
     
         
-
     
         
 <div class="card widget">
@@ -347,7 +377,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="About" height="28">
+                    <img src="/images/logo.svg" alt="type less, think more" height="28">
                 
                 </a>
                 <p class="is-size-7">
