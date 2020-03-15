@@ -19,7 +19,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://regularmotion.github.io/images/og_image.png">
 <meta property="article:published_time" content="2020-03-15T14:39:32.000Z">
-<meta property="article:modified_time" content="2020-03-15T14:39:32.676Z">
+<meta property="article:modified_time" content="2020-03-15T14:40:40.285Z">
 <meta property="article:author" content="Jangrok Lee">
 <meta property="article:tag" content="AWS">
 <meta property="article:tag" content="Beanstalk">
@@ -163,6 +163,8 @@
 <blockquote>
 <p>1) Clone environment &gt; &nbsp; 2) Upgrade Platform version &gt; &nbsp; 3) Deploy New Package &gt; &nbsp; 4) Test &gt; &nbsp; 5) Swap Environments </p>
 </blockquote>
+<a id="more"></a>
+
 <p>Platform version 업그레이드를 위해 Clone environment 대신 Create environment로 작업을 시작하면, 원하는 버전으로 업그레이드는 할 수 있다. 다만 번거로운 설정을 피할 수 없다. 이때 설정이라는 두 글자는 Monitoring 설정, VPC 설정, Tagging, 환경 변수 추가 등을 포함한다.</p>
 <p>혹한기 훈련과 반복 작업은 되도록 피하는게 좋은거 아닌가. 피할 수 있는 방법을 찾기 위해 관련 문서를 읽어보니, AWS CLI를 이용하면 원하는 Platform version으로 업그레이드를 할 수 있다. AWS Console에서는 Minor version update만 지원하기 때문에 원하는 Stack이 목록에 표시되지 않았던 것이다.</p>
 <p>Beanstalk의 Platform version 업그레이드를 위한 <a href="https://docs.aws.amazon.com/cli/latest/reference/elasticbeanstalk/update-environment.html">CLI</a> (심지어 간단하다.)</p>
