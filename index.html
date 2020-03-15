@@ -139,6 +139,61 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
+                <a class="has-link-black-ter" href="/2020/03/15/aws-change-beanstalk-runtime/">Change AWS Elastic Beanstalk Runtime with CLI</a>
+            
+        </h1>
+        <div class="content">
+            <p>AWS Elastic Beanstalk을 이용하여 서비스를 운영하고 있다면 Platform version을 업그레이드 해야 할 필요가 종종 있다. 내 경우에는 아래 3가지 경우가 종종의 구체적 예시에 해당한다.</p>
+<ul>
+<li>사용중인 Platform version이 Deprecated 될 예정이다.</li>
+<li>새로 작성한 코드가 특정 버전 이상에서만 동작한다.</li>
+<li>업그레이드로 성능 향상이 기대된다.</li>
+</ul>
+<p>위의 3가지 경우 말고도 Platform version을 업그레이드 해야 할 필요는 많다. 그런데 가끔 변경하고자 하는 Platform version이 AWS Console에 표시되지 않을 때가 있으면 난감하다.</p>
+<img src="/2020/03/15/aws-change-beanstalk-runtime/available-versions.png" class="" title="available-versions">
+<p>AWS Elastic Beanstalk의 <a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/platforms/platforms-supported.html#platforms-supported.PHP">Supported Platform</a>에도 PHP 7.3이 명시되어 있고, 새로 환경을 생성하려고 하면 PHP 7.3을 선택 할 수 있지만, Upgrade Platform의 선택지는 PHP 7.3을 제공하지 않는다. 이 무슨 날벼락인가.</p>
+<p>아래 순서로 Platform version 업그레이드를 진행하려고 계획 했으나 Clone environment 후 원하는 버전으로 업그레이드를 할 수 없는 상황이다.</p>
+<blockquote>
+<p>1) Clone environment &gt; &nbsp; 2) Upgrade Platform version &gt; &nbsp; 3) Deploy New Package &gt; &nbsp; 4) Test &gt; &nbsp; 5) Swap Environments </p>
+</blockquote>
+<p>Platform version 업그레이드를 위해 Clone environment 대신 Create environment로 작업을 시작하면, 원하는 버전으로 업그레이드는 할 수 있다. 다만 번거로운 설정을 피할 수 없다. 이때 설정이라는 두 글자는 Monitoring 설정, VPC 설정, Tagging, 환경 변수 추가 등을 포함한다.</p>
+<p>혹한기 훈련과 반복 작업은 되도록 피하는게 좋은거 아닌가. 피할 수 있는 방법을 찾기 위해 관련 문서를 읽어보니, AWS CLI를 이용하면 원하는 Platform version으로 업그레이드를 할 수 있다. AWS Console에서는 Minor version update만 지원하기 때문에 원하는 Stack이 목록에 표시되지 않았던 것이다.</p>
+<p>Beanstalk의 Platform version 업그레이드를 위한 <a href="https://docs.aws.amazon.com/cli/latest/reference/elasticbeanstalk/update-environment.html">CLI</a> (심지어 간단하다.)</p>
+<blockquote>
+<p> aws elasticbeanstalk update-environment –solution-stack-name “{stack-name}” –environment-id “x-xxxxxxxxxx”</p>
+</blockquote>
+<p>Stack Name은 <a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/platforms/platforms-supported.html#platforms-supported.PHP">AWS 문서</a>에서 제공하는 옵션에서 선택하면 된다.</p>
+<br>
+
+<p><strong>이 또한 피해가리라.</strong></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <!-- remove time and word-count from article start -->
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
                 <a class="has-link-black-ter" href="/2020/03/08/recap-aws-re-invent-2019/">Recap AWS re:Invent 2019</a>
             
         </h1>
@@ -281,7 +336,7 @@
                 <span class="level-item">AWS</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">2</span>
             </span>
         </a></li>
             </ul>
@@ -294,6 +349,19 @@
         <h3 class="menu-label">
             Recent
         </h3>
+        
+        <article class="media">
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-15T14:39:32.000Z">2020-03-15</time></div>
+                    <a href="/2020/03/15/aws-change-beanstalk-runtime/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Change AWS Elastic Beanstalk Runtime with CLI</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/AWS/">AWS</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -335,6 +403,13 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/AWS/">
                         <span class="tag">AWS</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Beanstalk/">
+                        <span class="tag">Beanstalk</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -384,6 +459,20 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/RDS-Proxy/">
                         <span class="tag">RDS Proxy</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Runtime/">
+                        <span class="tag">Runtime</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Tips/">
+                        <span class="tag">Tips</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
